@@ -16,6 +16,10 @@ function games_install {
     echo -e "\n${bold}Games applications install...${normal}\n"
     python ./src/software/games.py
 }
+function yaru-remix_install {
+    echo -e "\n${bold}Yaru-remix themes install...${normal}\n"
+    python ./src/themes/yaru-remix.py
+}
 function develop_tools_install {
     echo -e "\n${bold}Development Tools install...${normal}\n"
     python ./src/development/develop-tools.py
@@ -83,10 +87,11 @@ function main_menu {
     [1] Common applications
     [2] Games applications
     [3] All applications
+    [4] Yaru-remix theme
 
     Other options:
     
-    [4] Developer menu
+    [5] Developer menu
     [0] Exit
     "
     read -p "Select option: " option
@@ -105,6 +110,9 @@ function main_menu {
             games_install
             print_done;;
         4)
+            yaru-remix_install
+            print_done;;
+        5)
             developer_menu;;
         *)  
             echo -e "\n${bold}Wrong option${normal}";;

@@ -22,5 +22,3 @@ os.system('gsettings set org.gnome.desktop.interface icon-theme "Yaru-remix"')
 # Clear downloaded theme files
 os.system('echo -e "\nClearing downloaded files..."')
 os.system("rm -R $HOME/Downloads/yaru-remix-20.10.1")
-
-os.system('echo -e "\nYaru-remix themes installed!"')
